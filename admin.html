@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>304maps.com - Admin Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="admin-header">
+        <div class="admin-logo">304maps.com Admin</div>
+        <nav class="admin-nav">
+            <a href="index.html">View Site</a>
+            <a href="#">Settings</a>
+            <a href="#">Logout</a>
+        </nav>
+    </header>
+
+    <div class="admin-container">
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li><a href="#" class="active"><i>📊</i> Dashboard</a></li>
+                <li><a href="#"><i>📝</i> Reports</a></li>
+                <li><a href="#"><i>📍</i> Locations</a></li>
+                <li><a href="#"><i>👤</i> Users</a></li>
+                <li><a href="#"><i>⚙️</i> Settings</a></li>
+                <li><a href="#"><i>📢</i> Announcements</a></li>
+                <li><a href="#"><i>📈</i> Analytics</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <div class="dashboard-cards">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Total Reports</div>
+                        <div class="card-icon reports">📝</div>
+                    </div>
+                    <div class="card-value">1,248</div>
+                    <div class="card-change">+12% from last week</div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Active Users</div>
+                        <div class="card-icon users">👤</div>
+                    </div>
+                    <div class="card-value">543</div>
+                    <div class="card-change">+5% from last week</div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Marked Locations</div>
+                        <div class="card-icon locations">📍</div>
+                    </div>
+                    <div class="card-value">327</div>
+                    <div class="card-change negative">-3% from last week</div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Verified Reports</div>
+                        <div class="card-icon verified">✅</div>
+                    </div>
+                    <div class="card-value">892</div>
+                    <div class="card-change">+8% from last week</div>
+                </div>
+            </div>
+
+            <div class="data-table">
+                <div class="data-table-header">
+                    <h3 class="data-table-title">Recent Reports</h3>
+                    <div class="data-table-actions">
+                        <button>Export</button>
+                        <button class="primary">Add New</button>
+                    </div>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Type</th>
+                            <th>Location</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#1248</td>
+                            <td>Suspicious Activity</td>
+                            <td>Main St, Downtown</td>
+                            <td>2023-06-15 14:30</td>
+                            <td><span class="status verified">Verified</span></td>
+                            <td>
+                                <button class="action-btn view">View</button>
+                                <button class="action-btn edit">Edit</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#1247</td>
+                            <td>Prostitution</td>
+                            <td>5th Avenue</td>
+                            <td>2023-06-15 12:45</td>
+                            <td><span class="status pending">Pending</span></td>
+                            <td>
+                                <button class="action-btn view">View</button>
+                                <button class="action-btn edit">Edit</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#1246</td>
+                            <td>Drug Activity</td>
+                            <td>Central Park</td>
+                            <td>2023-06-14 22:15</td>
+                            <td><span class="status verified">Verified</span></td>
+                            <td>
+                                <button class="action-btn view">View</button>
+                                <button class="action-btn edit">Edit</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#1245</td>
+                            <td>Other</td>
+                            <td>Westside Mall</td>
+                            <td>2023-06-14 18:20</td>
+                            <td><span class="status rejected">Rejected</span></td>
+                            <td>
+                                <button class="action-btn view">View</button>
+                                <button class="action-btn delete">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#1244</td>
+                            <td>Suspicious Activity</td>
+                            <td>Riverfront</td>
+                            <td>2023-06-14 16:10</td>
+                            <td><span class="status verified">Verified</span></td>
+                            <td>
+                                <button class="action-btn view">View</button>
+                                <button class="action-btn edit">Edit</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="pagination">
+                    <button disabled>Previous</button>
+                    <button class="active">1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>Next</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="modal" id="reportModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Report Details #1248</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Type:</strong> Suspicious Activity</p>
+                <p><strong>Location:</strong> Main St, Downtown</p>
+                <p><strong>Date:</strong> June 15, 2023 14:30</p>
+                <p><strong>Status:</strong> <span class="status verified">Verified</span></p>
+                <p><strong>Description:</strong></p>
+                <p>Observed several individuals engaging in what appeared to be drug transactions near the downtown bus stop. One individual was handing small packages to others in exchange for cash.</p>
+                <p><strong>Submitted by:</strong> Anonymous</p>
+                <p><strong>Last updated:</strong> June 15, 2023 15:45 by admin1</p>
+            </div>
+            <div class="modal-footer">
+                <button class="cancel">Close</button>
+                <button class="confirm">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

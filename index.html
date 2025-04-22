@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>304maps.com - Community Reporting</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">304maps.com</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Report</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Community Safety Mapping</h1>
+        <p>Help identify and report suspicious activities in your neighborhood to keep your community safe.</p>
+        <a href="#report" class="btn">Make a Report</a>
+    </section>
+
+    <div class="map-container">
+        <div class="map-overlay">
+            <div class="map-control">
+                <label for="location-type">Filter by:</label>
+                <select id="location-type">
+                    <option value="all">All Reports</option>
+                    <option value="recent">Recent (Last 7 days)</option>
+                    <option value="verified">Verified Only</option>
+                </select>
+            </div>
+            <div class="map-control">
+                <label for="search-area">Search Area:</label>
+                <input type="text" id="search-area" placeholder="Enter location...">
+            </div>
+        </div>
+    </div>
+
+    <section id="report" class="report-form">
+        <h2>Submit a Report</h2>
+        <form id="reportForm">
+            <div class="form-group">
+                <label for="report-type">Type of Report</label>
+                <select id="report-type" required>
+                    <option value="">Select report type</option>
+                    <option value="suspicious">Suspicious Activity</option>
+                    <option value="prostitution">Prostitution Activity</option>
+                    <option value="drugs">Drug Activity</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" placeholder="Address or approximate location" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Date and Time</label>
+                <input type="datetime-local" id="date" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" rows="4" placeholder="Please provide details about what you observed..." required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="contact">Your Contact (Optional)</label>
+                <input type="text" id="contact" placeholder="Email or phone number">
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn">Submit Report</button>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="#">Our Mission</a></li>
+                    <li><a href="#">How It Works</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Safety Tips</a></li>
+                    <li><a href="#">Community Guidelines</a></li>
+                    <li><a href="#">Local Authorities</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <ul>
+                    <li><a href="mailto:contact@304maps.com">Email Us</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Feedback</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 304maps.com. All rights reserved.
+        </div>
+    </footer>
+
+   <script src="index.js"></script>
+</body>
+</html>
